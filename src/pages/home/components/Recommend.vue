@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -18,34 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/43/dea8b51719a4a69b68777baa68c146e4.water.jpg_200x200_8da8cebe.jpg',
-        title: '春晖园温泉度假村',
-        desc: '享受冬日温情',
-        price: '199.0'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_200x200_9638020d.jpg',
-        title: '渔阳滑雪场',
-        desc: '让冬天的温度high起来',
-        price: '119.0'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/43/dea8b51719a4a69b68777baa68c146e4.water.jpg_200x200_8da8cebe.jpg',
-        title: '春晖园温泉度假村',
-        desc: '享受冬日温情',
-        price: '199.0'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_200x200_9638020d.jpg',
-        title: '渔阳滑雪场',
-        desc: '让冬天的温度high起来',
-        price: '119.0'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
