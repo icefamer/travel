@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div>
     <router-link
     tag="div"
     class="header-abs"
@@ -47,10 +47,10 @@ export default {
       }
     }
   },
-  mounted () {
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  unmounted () {
+  deactivated () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
