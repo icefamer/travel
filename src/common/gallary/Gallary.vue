@@ -60,7 +60,6 @@ export default {
     background #000
     .wrapper
       width 100%
-      background-color #fff
       .gallary-img
         width 100%
       .swiper-pagination
